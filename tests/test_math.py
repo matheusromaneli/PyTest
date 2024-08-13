@@ -1,78 +1,287 @@
+import pytest
 from pu import math
 
 
 class TestAdd:
     def test_both_positive(self: "TestAdd") -> None:
-        # fix this test
-        a = 1
+        a = 2
         b = 2
         expected = 4
         assert math.add(a, b) == expected
 
-    # remove the `...` and add your test
-    def test_a_positive_b_negative(self: "TestAdd") -> None: ...
-    def test_a_negative_b_positive(self: "TestAdd") -> None: ...
-    def test_both_negative(self: "TestAdd") -> None: ...
-    def test_a_0_b_positive(self: "TestAdd") -> None: ...
-    def test_a_0_b_negative(self: "TestAdd") -> None: ...
-    def test_a_positive_b_0(self: "TestAdd") -> None: ...
-    def test_a_negative_b_0(self: "TestAdd") -> None: ...
-    def test_both_0(self: "TestAdd") -> None: ...
+    def test_a_positive_b_negative(self: "TestAdd") -> None:
+        a = 1
+        b = -1
+        expected = 0
+        assert math.add(a, b) == expected
+    def test_a_negative_b_positive(self: "TestAdd") -> None:
+        a = -1
+        b = 1
+        expected = 0
+        assert math.add(a, b) == expected
+
+    def test_both_negative(self: "TestAdd") -> None:
+        a = -1
+        b = -1
+        expected = -2
+        assert math.add(a, b) == expected
+
+    def test_a_0_b_positive(self: "TestAdd") -> None:
+        a = 0
+        b = 1
+        expected = 1
+        assert math.add(a, b) == expected
+
+    def test_a_0_b_negative(self: "TestAdd") -> None:
+        a = 0
+        b = -1
+        expected = -1
+        assert math.add(a, b) == expected
+
+    def test_a_positive_b_0(self: "TestAdd") -> None:
+        a = 1
+        b = 0
+        expected = 1
+        assert math.add(a, b) == expected
+
+    def test_a_negative_b_0(self: "TestAdd") -> None:
+        a = -1
+        b = 0
+        expected = -1
+        assert math.add(a, b) == expected
+
+    def test_both_0(self: "TestAdd") -> None:
+        a = 0
+        b = 0
+        expected = 0
+        assert math.add(a, b) == expected
+
 
 
 class TestSubtract:
-    # remove the `...` and add your test
-    def test_both_positive(self: "TestSubtract") -> None: ...
-    def test_a_positive_b_negative(self: "TestSubtract") -> None: ...
-    def test_a_negative_b_positive(self: "TestSubtract") -> None: ...
-    def test_both_negative(self: "TestSubtract") -> None: ...
-    def test_a_0_b_positive(self: "TestSubtract") -> None: ...
-    def test_a_0_b_negative(self: "TestSubtract") -> None: ...
-    def test_a_positive_b_0(self: "TestSubtract") -> None: ...
-    def test_a_negative_b_0(self: "TestSubtract") -> None: ...
-    def test_both_0(self: "TestSubtract") -> None: ...
+    def test_both_positive(self: "TestSubtract") -> None:
+        a = 1
+        b = 1
+        expected = 0
+        assert math.subtract(a, b) == expected
+
+    def test_a_positive_b_negative(self: "TestSubtract") -> None:
+        a = 1
+        b = -1
+        expected = 2
+        assert math.subtract(a, b) == expected
+
+    def test_a_negative_b_positive(self: "TestSubtract") -> None:
+        a = -1
+        b = 1
+        expected = -2
+        assert math.subtract(a, b) == expected
+
+    def test_both_negative(self: "TestSubtract") -> None:
+        a = -1
+        b = -1
+        expected = 0
+        assert math.subtract(a, b) == expected
+
+    def test_a_0_b_positive(self: "TestSubtract") -> None:
+        a = 0
+        b = 1
+        expected = -1
+        assert math.subtract(a, b) == expected
+
+    def test_a_0_b_negative(self: "TestSubtract") -> None:
+        a = 0
+        b = -1
+        expected = 1
+        assert math.subtract(a, b) == expected
+
+    def test_a_positive_b_0(self: "TestSubtract") -> None:
+        a = 1
+        b = 0
+        expected = 1
+        assert math.subtract(a, b) == expected
+
+    def test_a_negative_b_0(self: "TestSubtract") -> None:
+        a = -1
+        b = 0
+        expected = -1
+        assert math.subtract(a, b) == expected
+
+    def test_both_0(self: "TestSubtract") -> None:
+        a = 0
+        b = 0
+        expected = 0
+        assert math.subtract(a, b) == expected
+
 
 
 class TestMultiply:
-    # remove the `...` and add your test
-    def test_both_positive(self: "TestMultiply") -> None: ...
-    def test_a_positive_b_negative(self: "TestMultiply") -> None: ...
-    def test_a_negative_b_positive(self: "TestMultiply") -> None: ...
-    def test_both_negative(self: "TestMultiply") -> None: ...
-    def test_a_0_b_positive(self: "TestMultiply") -> None: ...
-    def test_a_0_b_negative(self: "TestMultiply") -> None: ...
-    def test_a_positive_b_0(self: "TestMultiply") -> None: ...
-    def test_a_negative_b_0(self: "TestMultiply") -> None: ...
-    def test_both_0(self: "TestMultiply") -> None: ...
+    def test_both_positive(self: "TestMultiply") -> None:
+        a = 2
+        b = 3
+        expected = 6
+        assert math.multiply(a, b) == expected
+
+    def test_a_positive_b_negative(self: "TestMultiply") -> None:
+        a = 2
+        b = -3
+        expected = -6
+        assert math.multiply(a, b) == expected
+
+    def test_a_negative_b_positive(self: "TestMultiply") -> None:
+        a = -2
+        b = 3
+        expected = -6
+        assert math.multiply(a, b) == expected
+
+    def test_both_negative(self: "TestMultiply") -> None:
+        a = -2
+        b = -3
+        expected = 6
+        assert math.multiply(a, b) == expected
+
+    def test_a_0_b_positive(self: "TestMultiply") -> None:
+        a = 0
+        b = 3
+        expected = 0
+        assert math.multiply(a, b) == expected
+
+    def test_a_0_b_negative(self: "TestMultiply") -> None:
+        a = 0
+        b = -3
+        expected = 0
+        assert math.multiply(a, b) == expected
+
+    def test_a_positive_b_0(self: "TestMultiply") -> None:
+        a = 2
+        b = 0
+        expected = 0
+        assert math.multiply(a, b) == expected
+
+    def test_a_negative_b_0(self: "TestMultiply") -> None:
+        a = -2
+        b = 0
+        expected = 0
+        assert math.multiply(a, b) == expected
+
+    def test_both_0(self: "TestMultiply") -> None:
+        a = 0
+        b = 0
+        expected = 0
+        assert math.multiply(a, b) == expected
+
+    def test_a_1_b_positive(self: "TestMultiply") -> None:
+        a = 1
+        b = 3
+        expected = 3
+        assert math.multiply(a, b) == expected
+
+    def test_a_1_b_negative(self: "TestMultiply") -> None:
+        a = 1
+        b = -3
+        expected = -3
+        assert math.multiply(a, b) == expected
+
+    def test_a_positive_b_1(self: "TestMultiply") -> None:
+        a = 2
+        b = 1
+        expected = 2
+        assert math.multiply(a, b) == expected
+
+    def test_a_negative_b_1(self: "TestMultiply") -> None:
+        a = -2
+        b = 1
+        expected = -2
+        assert math.multiply(a, b) == expected
+
 
 
 class TestDivide:
-    # remove the `...` and add your test
-    def test_both_positive(self: "TestDivide") -> None: ...
-    def test_a_positive_b_negative(self: "TestDivide") -> None: ...
-    def test_a_negative_b_positive(self: "TestDivide") -> None: ...
-    def test_both_negative(self: "TestDivide") -> None: ...
-    def test_a_0_b_positive(self: "TestDivide") -> None: ...
-    def test_a_0_b_negative(self: "TestDivide") -> None: ...
-    def test_a_positive_b_0(self: "TestDivide") -> None: ...
-    def test_a_negative_b_0(self: "TestDivide") -> None: ...
-    def test_both_0(self: "TestDivide") -> None: ...
+    def test_both_positive(self: "TestDivide") -> None:
+        a = 2
+        b = 2
+        expected = 1.0
+        assert math.divide(a, b) == expected
+
+    def test_a_positive_b_negative(self: "TestDivide") -> None:
+        a = 2
+        b = -2
+        expected = -1.0
+        assert math.divide(a, b) == expected
+
+    def test_a_negative_b_positive(self: "TestDivide") -> None:
+        a = -2
+        b = 2
+        expected = -1.0
+        assert math.divide(a, b) == expected
+
+    def test_both_negative(self: "TestDivide") -> None:
+        a = -2
+        b = -2
+        expected = 1.0
+        assert math.divide(a, b) == expected
+
+    def test_a_0_b_positive(self: "TestDivide") -> None:
+        a = 0
+        b = 2
+        expected = 0.0
+        assert math.divide(a, b) == expected
+
+    def test_a_0_b_negative(self: "TestDivide") -> None:
+        a = 0
+        b = -2
+        expected = 0.0
+        assert math.divide(a, b) == expected
+
+    def test_a_positive_b_0(self: "TestDivide") -> None:
+        a = 2
+        b = 0
+        with pytest.raises(ZeroDivisionError):
+            math.divide(a, b)
+
+    def test_a_negative_b_0(self: "TestDivide") -> None:
+        a = 2
+        b = 0
+        with pytest.raises(ZeroDivisionError):
+            math.divide(a, b)
+
+    def test_both_0(self: "TestDivide") -> None:
+        a = 0
+        b = 0
+        with pytest.raises(ZeroDivisionError):
+            math.divide(a, b)
+
 
 
 class TestSquareRoot:
-    # remove the `...` and add your test
-    def test_positive(self: "TestSquareRoot") -> None: ...
-    def test_negative(self: "TestSquareRoot") -> None: ...
-    def test_zero(self: "TestSquareRoot") -> None: ...
+    def test_positive(self: "TestSquareRoot") -> None:
+        a = 4
+        expected = 2
+        assert math.sqrt(a) == expected
+
+    def test_negative(self: "TestSquareRoot") -> None:
+        a = -4
+        with pytest.raises(ArithmeticError):
+            math.sqrt(a)
+
+    def test_zero(self: "TestSquareRoot") -> None:
+        a = 0
+        expected = 0
+        assert math.sqrt(a) == expected
 
 
 class TestDouble:
     def test_positive(self: "TestDouble") -> None:
-        if False:  # remove this if and add the math.double function
-            expected = 6
-            a = 3
-            assert math.double(a) == expected
+        expected = 6
+        a = 3
+        assert math.double(a) == expected
 
-    # remove the `...` and add your test
-    def test_negative(self: "TestDouble") -> None: ...
-    def test_zero(self: "TestDouble") -> None: ...
+    def test_negative(self: "TestDouble") -> None:
+        expected = -6
+        a = -3
+        assert math.double(a) == expected
+
+    def test_zero(self: "TestDouble") -> None:
+        expected = 0
+        a = 0
+        assert math.double(a) == expected

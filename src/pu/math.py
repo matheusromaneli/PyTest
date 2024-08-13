@@ -40,3 +40,7 @@ def sqrt(value: int) -> float:
         msg = f"square root of negative number not allowed: {value}"
         raise ArithmeticError(msg)
     return math_sqrt(value)
+
+def double(value: int) -> int:
+    """Double returns two times its input."""
+    return value * 2
