@@ -1,6 +1,7 @@
 # python
 *.egg-info
 __pycache__
+.venv
 
 # pytest
 .coverage
