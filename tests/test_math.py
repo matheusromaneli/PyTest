@@ -6,7 +6,7 @@ class TestAdd:
         # fix this test
         a = 1
         b = 2
-        expected = 3
+        expected = 4
         assert math.add(a, b) == expected
 
     # remove the `...` and add your test
