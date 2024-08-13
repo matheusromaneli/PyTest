@@ -173,26 +173,22 @@ class TestMultiply:
     def test_a_1_b_positive(self: "TestMultiply") -> None:
         a = 1
         b = 3
-        expected = 3
-        assert math.multiply(a, b) == expected
+        assert math.multiply(a, b) == b
 
     def test_a_1_b_negative(self: "TestMultiply") -> None:
         a = 1
         b = -3
-        expected = -3
-        assert math.multiply(a, b) == expected
+        assert math.multiply(a, b) == b
 
     def test_a_positive_b_1(self: "TestMultiply") -> None:
         a = 2
         b = 1
-        expected = 2
-        assert math.multiply(a, b) == expected
+        assert math.multiply(a, b) == a
 
     def test_a_negative_b_1(self: "TestMultiply") -> None:
         a = -2
         b = 1
-        expected = -2
-        assert math.multiply(a, b) == expected
+        assert math.multiply(a, b) == a
 
 
 
